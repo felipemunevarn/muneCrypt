@@ -69,10 +69,6 @@ html, body {
     flex-direction: column;
   }
   
-  .label-show-password {
-    order: 3;
-  }
-  
   label > span {
     color: var(--borderDarker);
     display: block;
@@ -93,26 +89,17 @@ html, body {
     outline: none;
   }
   
+  label button {
+    order: 3;
+    outline: none;
+  }
+
   label input::placeholder {
     color: var(--borderDark);
   }
   
-  /* trick from https://css-tricks.com/snippets/css/password-input-bullet-alternatives/ */
-  label input[name="password"] {
-    -webkit-text-security: disc;
-  }
-  
-  input[name="show-password"]:checked ~ div label input[name="password"] {
-    -webkit-text-security: none;
-  }
-  
   label:hover span {
     color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
-  }
-  
-  input[type="checkbox"] + div label:hover span::before,
-  label:hover input.text {
-    border-color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
   }
   
   label input.text:focus,
@@ -137,9 +124,24 @@ html, body {
     order: 2;
     padding: 0.25rem 0.5rem;
     width: 15rem;
-    transition: all 0.25s;
+    transition: all 0.25s;3
   }
-  
+
+  button {
+    color: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
+    background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-top: 0.625rem;
+    order: 4;
+    outline: 1px dashed transparent;
+    outline-offset: 2px;
+    padding-left: 0;
+    text-transform: uppercase;
+    height: 50px;
+    width: 100px;
+  }
+
   input[type="submit"] {
     color: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
     background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
@@ -159,6 +161,11 @@ html, body {
     outline-offset: 2px;
   }
   
+  button:focus {
+    outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+    outline-offset: 2px;
+  }
+  
   input[type="submit"]:focus {
     background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
   }
@@ -171,48 +178,28 @@ html, body {
     background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
     transition: all 0.125s;
   }
-  
-  /** Checkbox styling */
-  .a11y-hidden {
-    position: absolute;
-    top: -1000em;
-    left: -1000em;
+
+  button:focus {
+    background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
   }
   
-  input[type="checkbox"] + label span {
-    padding-left: 1.25rem;
-    position: relative;
+  button:hover {
+    background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
   }
   
-  input[type="checkbox"] + label span::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0.75rem;
-    height: 0.75rem;
-    border: 1px solid var(--borderDark);
-    border-radius: var(--borderRadius);
-    transition: all 0.25s;
-    outline:1px dashed transparent;
-    outline-offset: 2px;
+  button:active {
+    background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+    transition: all 0.125s;
   }
-  
-  input[type="checkbox"]:checked + label span::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0.1875rem;
-    left: 0.1875rem;
-    width: 0.375rem;
-    height: 0.375rem;
-    border: 1px solid var(--borderDark);
-    border-radius: var(--borderRadius);
-    transition: all 0.25s;
-    outline:1px dashed transparent;
-    outline-offset: 2px;
-    background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+
+  .textarea {
+    display: inline;
+  }
+
+  .areatest {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
   }
   
   /** PERSON */
@@ -306,12 +293,6 @@ html, body {
     -webkit-animation: blink 5s infinite;
     animation: blink 5s infinite;
     transition: all 0.15s;
-  }
-  
-  input[name="show-password"]:checked ~ figure .head .eyes::before,
-  input[name="show-password"]:checked ~ figure .head .eyes::after {
-    height: 0.125rem;
-    animation: none;
   }
   
   figure .head .mouth {
