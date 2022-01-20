@@ -1,14 +1,13 @@
 html, body {
-    align-items: center;
+    /* align-items: center; */
     background: #f2f4f8;
     border: 0;
-    display: flex;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
-    height: 100%;
-    justify-content: center;
+    height: 90%;
+    /* justify-content: center; */
     margin: 0;
-    padding: 0;
+    padding: 0;   
   }
   
   form {
@@ -34,22 +33,21 @@ html, body {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    position: relative;
-    overflow: hidden;
+    max-width: 400px;
+    justify-content: flex-end;
   }
   
   form .email, form .email a {
     color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
     font-size: 0.825rem;
-    order: 4;
-    text-align: center;
     margin-top: 0.25rem;
     outline: 1px dashed transparent;
     outline-offset: 2px;
-    display: inline;
   }
   
   form a:hover {
+    /* justify-content: space-around; */
+    width: 50%;
     color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
     transition: color 0.25s;
   }
@@ -60,21 +58,10 @@ html, body {
     outline-offset: 2px;
   }
   
-  form > div {
-    order: 2;
-  }
-  
-  label {
-    display: flex;
-    flex-direction: column;
-  }
-  
   label > span {
     color: var(--borderDarker);
-    display: block;
     font-size: 0.825rem;
     margin-top: 0.625rem;
-    order: 1;
     transition: all 0.25s;
   }
   
@@ -84,17 +71,11 @@ html, body {
     margin-left: 0.125rem;
   }
   
-  label input {
-    order: 2;
-    outline: none;
-  }
-  
   label button {
-    order: 3;
     outline: none;
   }
 
-  label input::placeholder {
+  label textarea::placeholder {
     color: var(--borderDark);
   }
   
@@ -102,8 +83,8 @@ html, body {
     color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
   }
   
-  label input.text:focus,
-  label input.text:active {
+  label textarea.text:focus,
+  label textarea.text:active {
     border-color:  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
     box-shadow: 0 1px  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
   }
@@ -121,10 +102,9 @@ html, body {
     height: 2.25rem;
     line-height: 1.25rem;
     margin-top: 0.25rem;
-    order: 2;
     padding: 0.25rem 0.5rem;
     width: 15rem;
-    transition: all 0.25s;3
+    transition: all 0.25s;
   }
 
   button {
@@ -133,7 +113,6 @@ html, body {
     font-size: 0.75rem;
     font-weight: bold;
     margin-top: 0.625rem;
-    order: 4;
     outline: 1px dashed transparent;
     outline-offset: 2px;
     padding-left: 0;
@@ -148,7 +127,6 @@ html, body {
     font-size: 0.75rem;
     font-weight: bold;
     margin-top: 0.625rem;
-    order: 4;
     outline: 1px dashed transparent;
     outline-offset: 2px;
     padding-left: 0;
@@ -192,29 +170,52 @@ html, body {
     transition: all 0.125s;
   }
 
-  .textarea {
-    display: inline;
-  }
+.areatest {
+  display: flex;
+  justify-content: space-around;
+}
 
-  .areatest {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-  }
+.areatext {
+  display: flex;
+  justify-content: space-around;
+}
+
+textarea {
+  height: 80px;
+  max-width: 150px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  font-size: 0.825rem;
+}
   
   /** PERSON */
   figure {
     --skinH: 30;
-    --skinS: 100%;
-    --skinL: 87%;
-    --hair: rgb(180,70,60);
+    --skinS: 50%;
+    --skinL: 62%;
+    --hair: rgb(29, 26, 26);
     background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), 95%);
     border: 1px solid rgba(0,0,0,0.0625);
     border-radius: 50%;
     height: 0;
     margin: auto auto;
     margin-bottom: 2rem;
-    order: 1;
     padding-top: 60%;
     position: relative;
     width: 60%;
