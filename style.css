@@ -203,6 +203,11 @@ footer {
   width: 100%;
   font-size: 0.825rem;
 }
+
+.mid-footer {
+  display: flex;
+  justify-content: space-around;
+}
   
   /** PERSON */
   figure {
