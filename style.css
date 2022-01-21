@@ -1,13 +1,14 @@
 html, body {
-    /* align-items: center; */
     background: #f2f4f8;
     border: 0;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     height: 90%;
-    /* justify-content: center; */
     margin: 0;
-    padding: 0;   
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
   }
   
   form {
@@ -34,7 +35,7 @@ html, body {
     flex-direction: column;
     padding: 1rem;
     max-width: 400px;
-    justify-content: flex-end;
+    justify-content:space-around;
   }
   
   form .email, form .email a {
@@ -46,7 +47,6 @@ html, body {
   }
   
   form a:hover {
-    /* justify-content: space-around; */
     width: 50%;
     color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
     transition: color 0.25s;
@@ -206,14 +206,15 @@ footer {
 
 .mid-footer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
 
 .center-mid-footer { 
   justify-content: center;
 }
 
-.justify-mid-footer { 
+.justify-mid-footer {
+  display: flex;
   justify-content: space-around;
 }
   
