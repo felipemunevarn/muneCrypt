@@ -8,7 +8,8 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
+    margin-top: 16px;   
   }
   
   form {
@@ -46,7 +47,7 @@ html, body {
     outline-offset: 2px;
   }
   
-  form a:hover {
+  /* form a:hover {
     width: 50%;
     color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
     transition: color 0.25s;
@@ -56,7 +57,7 @@ html, body {
     color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
     outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
     outline-offset: 2px;
-  }
+  } */
   
   label > span {
     color: var(--borderDarker);
@@ -118,7 +119,7 @@ html, body {
     padding-left: 0;
     text-transform: uppercase;
     height: 50px;
-    width: 100px;
+    width: 80px;
   }
 
   input[type="submit"] {
@@ -170,9 +171,18 @@ html, body {
     transition: all 0.125s;
   }
 
-.areatest {
+.buttons {
   display: flex;
-  justify-content: space-around;
+}
+
+.encryption {
+  width: 50%;
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }
 
 .areatext {
@@ -183,6 +193,7 @@ html, body {
 textarea {
   height: 80px;
   max-width: 150px;
+  margin: 8px;
 }
 
 .inputs {
@@ -200,8 +211,15 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  width: 100%;
+  width: 600px;
   font-size: 0.825rem;
+}
+
+@media (max-width: 580px) {
+  footer {
+    flex-direction: column;
+    width: 350px;
+  }
 }
 
 .mid-footer {
@@ -209,7 +227,8 @@ footer {
   flex-direction: column;
 }
 
-.center-mid-footer { 
+.center-mid-footer {
+  display: flex;
   justify-content: center;
 }
 
