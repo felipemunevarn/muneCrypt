@@ -208,6 +208,14 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+
+.center-mid-footer { 
+  justify-content: center;
+}
+
+.justify-mid-footer { 
+  justify-content: space-around;
+}
   
   /** PERSON */
   figure {
