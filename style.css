@@ -47,18 +47,6 @@ html, body {
     outline-offset: 2px;
   }
   
-  /* form a:hover {
-    width: 50%;
-    color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
-    transition: color 0.25s;
-  }
-  
-  form a:focus {
-    color: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
-    outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
-    outline-offset: 2px;
-  } */
-  
   label > span {
     color: var(--borderDarker);
     font-size: 0.825rem;
